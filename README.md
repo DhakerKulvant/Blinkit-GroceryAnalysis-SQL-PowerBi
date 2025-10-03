@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-Data%20Processing-brightgreen)](https://www.python.org/) 
 [![Dataset](https://img.shields.io/badge/Dataset-CSV-red)](data/raw_data.csv)
 
-![Dashboard Preview](images/blinkit_dashboard.png)
+![Dashboard Preview](Images/blinkit_dashboard.png)
 
 ---
 
