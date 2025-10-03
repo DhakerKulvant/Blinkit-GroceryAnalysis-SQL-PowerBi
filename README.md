@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-Data%20Processing-brightgreen)](https://www.python.org/) 
 [![Dataset](https://img.shields.io/badge/Dataset-CSV-red)](data/raw_data.csv)
 
-![Dashboard Preview](images/blinkit_dashboard.jpg)
+![Dashboard Preview](images/blinkit_dashboard.png)
 
 ---
 
@@ -22,7 +22,6 @@
 - [Project Structure](#-project-structure)  
 - [Getting Started](#-getting-started)  
 - [Business Recommendations](#-business-recommendations)  
-- [Future Enhancements](#-future-enhancements)  
 - [Author](#-author)  
 
 ---
@@ -91,25 +90,7 @@ Item Fat Content | Item Identifier | Item Type | Outlet Establishment Year | Out
 ---
 
 ## 🔧 Data Cleaning Process
-
-### SQL Examples
-```sql
--- Standardize Fat Content
-UPDATE blinkitgrocerydata
-SET `Item Fat Content` = 
-    CASE 
-        WHEN `Item Fat Content` IN ('LF', 'low fat') THEN 'Low Fat'
-        WHEN `Item Fat Content` = 'reg' THEN 'Regular'
-        ELSE `Item Fat Content`
-    END;
-
--- Total Sales in Millions
-SELECT CAST(SUM(`Total Sales`) / 1000000.0 AS DECIMAL(10,2)) AS `Total Sales Million`
-FROM blinkitgrocerydata;
-
--- Average Sales
-SELECT CAST(AVG(`Total Sales`) AS INT) AS `Avg Sales`
-FROM blinkitgrocerydata;
+- through Sql quries
 
 ## 📊 Dashboard Features
 
@@ -171,13 +152,10 @@ Blinkit-GroceryAnalysis-SQL-PowerBi/
 └── README.md
 
 ## 🚀 Getting Started
-
 ### Clone Repository
 ``bash
 git clone https://github.com/DhakerKulvant/Blinkit-GroceryAnalysis-SQL-PowerBi.git
-
 ## 🚀 Database Setup & Power BI
-
 ### Database Setup
 1. Import the dataset into **MySQL Workbench**  
 2. Run SQL data cleaning queries  
